@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CoinLab LTD | Crypto Mining Community</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <!-- Meta Pixel Code -->
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1090425552449970');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+        src="https://www.facebook.com/tr?id=1090425552449970&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+    <style>
+        :root {
+            --primary: #00FFA3;
+            --primary-dark: #00CC83;
+            --secondary: #6C5CE7;
+            --dark: #0A0E17;
+            --light: #F5F6FA;
+            --text-primary: #FFFFFF;
+            --text-secondary: #B0B0B0;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: var(--dark);
+            color: var(--text-primary);
+            font-family: 'Roboto', sans-serif;
+            height: 100vh;
+            overflow: hidden;
+            background-image: 
+                radial-gradient(circle at 25% 25%, rgba(0, 255, 163, 0.1) 0%, transparent 25%),
+                radial-gradient(circle at 75% 75%, rgba(108, 92, 231, 0.1) 0%, transparent 25%);
+            position: relative;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .hero-content {
+            margin-bottom: 50px;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+        
+        .logo-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            font-size: 28px;
+            transform: rotate(15deg);
+        }
+        
+        .logo-text {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 36px;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        
+        h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .subtitle {
+            font-size: 20px;
+            color: var(--text-secondary);
+            max-width: 700px;
+            margin: 0 auto 40px;
+            line-height: 1.6;
+        }
+        
+        .telegram-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #0088CC, #34B7F1);
+            color: white;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 24px;
+            font-weight: 700;
+            padding: 20px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            box-shadow: 0 10px 30px rgba(0, 136, 204, 0.4);
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            margin-top: 30px;
+        }
+        
+        .telegram-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 136, 204, 0.6);
+        }
+        
+        .telegram-button:active {
+            transform: translateY(0);
+        }
+        
+        .telegram-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #34B7F1, #0088CC);
+            opacity: 0;
+            transition: opacity 0.3s;
+            z-index: -1;
+        }
+        
+        .telegram-button:hover::before {
+            opacity: 1;
+        }
+        
+        .telegram-icon {
+            margin-right: 15px;
+            font-size: 30px;
+        }
+        
+        .tech-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            opacity: 0.3;
+            pointer-events: none;
+        }
+        
+        .hexagon {
+            position: absolute;
+            width: 100px;
+            height: 57.74px;
+            background-color: rgba(0, 255, 163, 0.1);
+            border-left: 1px solid var(--primary);
+            border-right: 1px solid var(--primary);
+        }
+        
+        .hexagon::before,
+        .hexagon::after {
+            content: "";
+            position: absolute;
+            width: 0;
+            border-left: 50px solid transparent;
+            border-right: 50px solid transparent;
+        }
+        
+        .hexagon::before {
+            bottom: 100%;
+            border-bottom: 28.87px solid rgba(0, 255, 163, 0.1);
+            border-left: 1px solid var(--primary);
+            border-right: 1px solid var(--primary);
+        }
+        
+        .hexagon::after {
+            top: 100%;
+            width: 0;
+            border-top: 28.87px solid rgba(0, 255, 163, 0.1);
+            border-left: 1px solid var(--primary);
+            border-right: 1px solid var(--primary);
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        .mining-animation {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(0, 255, 163, 0.1) 0%, transparent 70%);
+            animation: pulse 4s infinite;
+            z-index: -1;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(0.8); opacity: 0.5; }
+            50% { transform: scale(1.2); opacity: 0.8; }
+            100% { transform: scale(0.8); opacity: 0.5; }
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 36px;
+            }
+            
+            .subtitle {
+                font-size: 18px;
+                padding: 0 20px;
+            }
+            
+            .telegram-button {
+                font-size: 20px;
+                padding: 16px 32px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Animated background elements -->
+    <div class="tech-background" id="techBackground"></div>
+    <div class="mining-animation" style="top: 20%; left: 10%;"></div>
+    <div class="mining-animation" style="top: 70%; left: 80%; animation-delay: 1s;"></div>
+    
+    <div class="container">
+        <div class="hero-content">
+            <div class="logo">
+                <div class="logo-icon">⛏️</div>
+                <div class="logo-text">CoinLab LTD</div>
+            </div>
+            
+            <h1>EXCLUSIVE CRYPTO MINING COMMUNITY</h1>
+            <p class="subtitle">
+                Join our private Telegram channel for premium crypto insights, mining strategies, 
+                and exclusive market analysis. Limited access available.
+            </p>
+            
+            <a href="https://t.me/CoinLab_LTD" class="telegram-button" onclick="fbq('track', 'Lead')">
+                <span class="telegram-icon">✈️</span>
+                JOIN OUR TELEGRAM CHANNEL
+            </a>
+        </div>
+    </div>
+    
+    <script>
+        // Create dynamic hexagon background
+        const techBackground = document.getElementById('techBackground');
+        const colors = ['rgba(0, 255, 163, 0.1)', 'rgba(108, 92, 231, 0.1)', 'rgba(0, 206, 255, 0.1)'];
+        
+        for (let i = 0; i < 20; i++) {
+            const hexagon = document.createElement('div');
+            hexagon.className = 'hexagon';
+            
+            // Random position
+            const left = Math.random() * 100;
+            const top = Math.random() * 100;
+            
+            // Random size
+            const size = Math.random() * 50 + 30;
+            
+            // Random color
+            const color = colors[Math.floor(Math.random() * colors.length)];
+            
+            hexagon.style.width = `${size}px`;
+            hexagon.style.height = `${size * 0.5774}px`;
+            hexagon.style.left = `${left}%`;
+            hexagon.style.top = `${top}%`;
+            hexagon.style.backgroundColor = color;
+            hexagon.style.borderLeftColor = color === 'rgba(0, 255, 163, 0.1)' ? 'var(--primary)' : 
+                                          color === 'rgba(108, 92, 231, 0.1)' ? 'var(--secondary)' : 'var(--secondary)';
+            hexagon.style.borderRightColor = color === 'rgba(0, 255, 163, 0.1)' ? 'var(--primary)' : 
+                                           color === 'rgba(108, 92, 231, 0.1)' ? 'var(--secondary)' : 'var(--secondary)';
+            
+            // Animation
+            const duration = Math.random() * 10 + 10;
+            const delay = Math.random() * 5;
+            hexagon.style.animation = `float ${duration}s ease-in-out ${delay}s infinite`;
+            
+            techBackground.appendChild(hexagon);
+            
+            // Add before/after elements for hexagon shape
+            const before = document.createElement('div');
+            before.style.position = 'absolute';
+            before.style.bottom = '100%';
+            before.style.width = '0';
+            before.style.borderLeft = `${size/2}px solid transparent`;
+            before.style.borderRight = `${size/2}px solid transparent`;
+            before.style.borderBottom = `${size * 0.2887}px solid ${color}`;
+            before.style.borderLeftWidth = '1px';
+            before.style.borderRightWidth = '1px';
+            before.style.borderLeftColor = color === 'rgba(0, 255, 163, 0.1)' ? 'var(--primary)' : 
+                                         color === 'rgba(108, 92, 231, 0.1)' ? 'var(--secondary)' : 'var(--secondary)';
+            before.style.borderRightColor = color === 'rgba(0, 255, 163, 0.1)' ? 'var(--primary)' : 
+                                          color === 'rgba(108, 92, 231, 0.1)' ? 'var(--secondary)' : 'var(--secondary)';
+            
+            const after = document.createElement('div');
+            after.style.position = 'absolute';
+            after.style.top = '100%';
+            after.style.width = '0';
+            after.style.borderLeft = `${size/2}px solid transparent`;
+            after.style.borderRight = `${size/2}px solid transparent`;
+            after.style.borderTop = `${size * 0.2887}px solid ${color}`;
+            after.style.borderLeftWidth = '1px';
+            after.style.borderRightWidth = '1px';
+            after.style.borderLeftColor = color === 'rgba(0, 255, 163, 0.1)' ? 'var(--primary)' : 
+                                         color === 'rgba(108, 92, 231, 0.1)' ? 'var(--secondary)' : 'var(--secondary)';
+            after.style.borderRightColor = color === 'rgba(0, 255, 163, 0.1)' ? 'var(--primary)' : 
+                                         color === 'rgba(108, 92, 231, 0.1)' ? 'var(--secondary)' : 'var(--secondary)';
+            
+            hexagon.appendChild(before);
+            hexagon.appendChild(after);
+        }
+
+        // Track button click
+        document.querySelector('.telegram-button').addEventListener('click', function() {
+            fbq('track', 'Lead');
+        });
+    </script>
+</body>
+</html>
